@@ -1,0 +1,184 @@
+/* ---------- Base (móvil) ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------- Cabecera ---------- */
+header {
+  height: 66px;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #0a3a1f;
+}
+
+.logo {
+  width: 48px;
+}
+
+.cerrar {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #335b6b;
+  color: white;
+  font-size: 36px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* El icono de salir solo se usa en tablet y PC */
+.icono-salir {
+  display: none;
+}
+
+/* ---------- Bloques ---------- */
+main a {
+  display: block;
+  text-decoration: none;
+}
+
+h2 {
+  padding: 6px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+main img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+/* Colores de cada barra */
+.conocenos h2 {
+  background: #b9dc5a;
+  color: #2f4a5a;
+}
+
+.asistencia h2 {
+  background: #b01c1c;
+  color: #f5e61b;
+}
+
+.soporte h2 {
+  background: #5a7d2a;
+  color: #2b3fcf;
+}
+
+/* ================= TABLET (768px en adelante) ================= */
+@media (min-width: 768px) {
+  /* Fondo degradado de toda la página */
+  body {
+    min-height: 100vh;
+    background: linear-gradient(#0a5a42, #021a12);
+  }
+
+  header {
+    height: 72px;
+    padding: 0 24px;
+  }
+
+  .logo {
+    width: 58px;
+  }
+
+  /* La X se cambia por el icono de salir, sin círculo */
+  .cerrar {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+    font-size: 40px;
+  }
+
+  .icono-x {
+    display: none;
+  }
+
+  .icono-salir {
+    display: inline-block;
+  }
+
+  /* Los tres bloques en una fila, como tarjetas redondeadas */
+  main {
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+  }
+
+  main a {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;   /* recorta las esquinas de la imagen */
+  }
+
+  main img {
+    height: 55vh;
+  }
+
+  h2 {
+    padding: 6px;
+    font-size: 20px;
+  }
+
+  /* Colores de las barras en tablet y PC */
+  .conocenos h2 {
+    background: #2fd4b0;
+    color: #2c6b5a;
+  }
+
+  .asistencia h2 {
+    background: #0f3b24;
+    color: #f0e61b;
+  }
+
+  .soporte h2 {
+    background: #5fb000;
+    color: #2b3fcf;
+  }
+}
+
+/* ================= PC (1024px en adelante) ================= */
+@media (min-width: 1024px) {
+  header {
+    padding: 0 48px;
+  }
+
+  main {
+    padding: 32px 48px;
+    gap: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  /* Con mouse: la imagen se aclara al pasar por encima */
+  main img {
+    transition: opacity 0.2s;
+  }
+
+  main a:hover img {
+    opacity: 0.85;
+  }
+
+  .cerrar:hover {
+    opacity: 0.8;
+  }
+}

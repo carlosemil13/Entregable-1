@@ -1,0 +1,226 @@
+/* ---------- Base (móvil) ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+/* Los inputs y botones no heredan la fuente solos, hay que pedirlo */
+input,
+button {
+  font-family: inherit;
+}
+
+/* Cada pantalla ocupa todo el celular y centra su contenido */
+main {
+  min-height: 100vh;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  text-align: center;
+}
+
+/* Clase para esconder una pantalla (la usa el JS) */
+.oculto {
+  display: none;
+}
+
+/* ---------- Pantalla 1: Bienvenida ---------- */
+#bienvenida {
+  /* Capa oscura verde encima de la imagen de fondo */
+  background:
+    linear-gradient(rgba(0, 40, 25, 0.55), rgba(0, 40, 25, 0.55)),
+    url("../image/fondo.png") center / cover no-repeat;
+}
+
+.usuarios {
+  width: 64px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 600;
+  max-width: 220px;
+}
+
+p {
+  font-size: 15px;
+  max-width: 230px;
+  line-height: 1.4;
+}
+
+.mascota {
+  width: 70px;
+}
+
+#bienvenida button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 40px;
+  border: none;
+  border-radius: 999px;
+
+  background: white;
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ---------- Pantalla 2: Iniciar sesión ---------- */
+#login {
+  background: linear-gradient(#08795f, #00110d);
+}
+
+.perfil {
+  font-size: 76px;
+  color: #f2f2f2;
+}
+
+form {
+  width: 76%;
+  max-width: 320px;
+  padding: 24px 24px 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background: #dcdcdc;
+  color: black;
+  border-radius: 8px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+}
+
+input {
+  height: 42px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 999px;
+  background: white;
+  font-size: 16px;
+}
+
+form button {
+  align-self: center;
+  margin-top: 12px;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 999px;
+
+  background: #2f3f27;
+  color: white;
+  font-size: 18px;
+}
+
+/* ================= TABLET (768px en adelante) ================= */
+@media (min-width: 768px) {
+  /* Las dos pantallas se ven juntas, una al lado de la otra */
+  body {
+    display: flex;
+  }
+
+  #bienvenida {
+    flex: 3;   /* ocupa 3 partes */
+  }
+
+  #login {
+    flex: 2;   /* ocupa 2 partes */
+  }
+
+  /* Aquí no se esconde nada: ya no hace falta el botón "Siguiente" */
+  .oculto {
+    display: flex;
+  }
+
+  #bienvenida button {
+    display: none;
+  }
+
+  /* Pantalla 1 */
+  .usuarios {
+    width: 72px;
+  }
+
+  h1 {
+    font-size: 24px;
+    max-width: 260px;
+  }
+
+  p {
+    font-size: 18px;
+    max-width: 280px;
+  }
+
+  .mascota {
+    width: 80px;
+  }
+
+  /* Pantalla 2 */
+  .perfil {
+    font-size: 80px;
+  }
+
+  form {
+    width: 70%;
+    max-width: 360px;
+  }
+}
+
+/* ================= PC (1024px en adelante) ================= */
+@media (min-width: 1024px) {
+  .usuarios {
+    width: 90px;
+  }
+
+  h1 {
+    font-size: 32px;
+    max-width: 360px;
+  }
+
+  p {
+    font-size: 20px;
+    max-width: 380px;
+  }
+
+  .mascota {
+    width: 100px;
+  }
+
+  form {
+    max-width: 400px;
+  }
+
+  /* Con mouse: manito y cambio de color al pasar por encima */
+  button {
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background: #3f5436;
+  }
+}

@@ -1,0 +1,307 @@
+/* ---------- Base (móvil) ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Cada pantalla ocupa todo el celular */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Clase para esconder una pantalla (la usa el JS) */
+.oculto {
+  display: none;
+}
+
+/* ---------- Pantalla 1: Tabla ---------- */
+header {
+  height: 66px;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #0a3a1f;
+}
+
+.logo {
+  width: 48px;
+}
+
+.menu {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #335b6b;
+  color: #e5e5e5;
+  font-size: 32px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  padding: 40px 16px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  background: linear-gradient(#0a5e47, #00110d);
+}
+
+/* Tarjeta gris con scroll */
+.tabla {
+  width: 100%;
+  max-height: 480px;
+  padding: 20px;
+
+  overflow: auto;            /* aparece el scroll si la tabla es más grande */
+  background: #d9d9d9;
+  scrollbar-color: #7a7a7a #d9d9d9;
+}
+
+table {
+  width: 100%;
+  min-width: 320px;          /* hace que haya scroll horizontal en celulares angostos */
+  border-collapse: collapse; /* une los bordes de las celdas */
+}
+
+th {
+  padding: 10px 6px;
+  background: #0a3a1f;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #1d1d1d;
+}
+
+td {
+  height: 42px;
+  background: white;
+  border: 1px solid #1d1d1d;
+}
+
+#siguiente {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 36px;
+  border: none;
+  border-radius: 999px;
+
+  background: #0a3a1f;
+  color: white;
+  font-size: 18px;
+}
+
+/* ---------- Pantalla 2: Autenticación ---------- */
+#autenticar {
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  background: linear-gradient(#0a5e47, #00110d);
+}
+
+.usuario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Este texto solo se usa en tablet y PC */
+.texto {
+  display: none;
+}
+
+.perfil {
+  font-size: 160px;
+  color: #f2f2f2;
+}
+
+.tarjeta {
+  width: 88%;
+  max-width: 340px;
+  padding: 16px 16px 0;
+
+  background: #d9d9d9;
+  border-radius: 40px;
+}
+
+/* Caja blanca */
+.rostro {
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  background: white;
+  border-radius: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.rostro img {
+  width: 130px;
+}
+
+/* Los dos iconos de abajo, separados por una línea en medio */
+.opciones {
+  padding: 16px 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+
+  background: linear-gradient(#1c3a4a, #1c3a4a) center / 2px 100% no-repeat;
+}
+
+.opciones img {
+  width: 70px;
+}
+
+.opciones i {
+  font-size: 70px;
+  color: #1c3a4a;
+}
+
+/* ================= TABLET (768px en adelante) ================= */
+@media (min-width: 768px) {
+  header {
+    height: 80px;
+    padding: 0 48px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  /* Pantalla 1: la tabla se centra y se hace más ancha */
+  main {
+    padding: 60px 48px 40px;
+  }
+
+  .tabla {
+    max-width: 720px;
+    max-height: 60vh;
+  }
+
+  th {
+    font-size: 16px;
+  }
+
+  td {
+    height: 48px;
+  }
+
+  #siguiente {
+    font-size: 20px;
+  }
+
+  /* Pantalla 2: dos columnas separadas por una línea vertical */
+  #autenticar {
+    padding: 40px;
+    flex-direction: row;
+    justify-content: space-around;
+
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) center / 1px 85% no-repeat,
+      linear-gradient(#0a5e47, #00110d);
+  }
+
+  /* Las dos columnas miden lo mismo para que la línea quede al centro */
+  .usuario,
+  .tarjeta {
+    width: 40%;
+    max-width: 380px;
+  }
+
+  .usuario {
+    gap: 24px;
+  }
+
+  .perfil {
+    font-size: 150px;
+  }
+
+  /* El texto pasa de la tarjeta al lado izquierdo */
+  .texto {
+    display: block;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .rostro p {
+    display: none;
+  }
+
+  .rostro {
+    padding: 60px 20px;
+  }
+
+  .rostro img {
+    width: 60%;
+  }
+
+  .opciones img {
+    width: 64px;
+  }
+
+  .opciones i {
+    font-size: 64px;
+  }
+}
+
+/* ================= PC (1024px en adelante) ================= */
+@media (min-width: 1024px) {
+  .tabla {
+    max-width: 900px;
+  }
+
+  .perfil {
+    font-size: 180px;
+  }
+
+  .texto {
+    font-size: 18px;
+  }
+
+  /* Con mouse: manito y cambio de color al pasar por encima */
+  button {
+    cursor: pointer;
+  }
+
+  #siguiente:hover {
+    background: #0f4f2b;
+  }
+
+  .menu:hover {
+    background: #3f6e80;
+  }
+}

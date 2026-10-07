@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido</title>
+
+  <!-- Fuente Inter (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (iconos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Nuestro CSS -->
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+
+  <!-- PANTALLA 1: Bienvenida -->
+  <main id="bienvenida">
+    <!-- Aquí pones tu imagen de usuarios -->
+    <img class="usuarios" src="assets/image/Usuario.png" alt="Usuarios">
+
+    <h1>¡Qué bueno verte de nuevo!</h1>
+
+    <p>“Porque nos importa cuida tu salud, ten un día maravilloso.”</p>
+
+    <!-- Aquí pones tu imagen de la mascota -->
+    <img class="mascota" src="assets/image/mascota.png" alt="Mascota">
+
+    <button id="siguiente">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+  </main>
+
+  <!-- PANTALLA 2: Iniciar sesión (empieza oculta) -->
+  <main id="login" class="oculto">
+    <i class="fa-solid fa-user perfil"></i>
+
+    <form action="dashboard.html">
+      <h2>Iniciar Sesión</h2>
+
+      <label>
+        Correo electrónico:
+        <input type="email" required>
+      </label>
+
+      <label>
+        Contraseña:
+        <input type="password" required>
+      </label>
+
+      <button>Ingresar</button>
+    </form>
+  </main>
+
+  <!-- Nuestro JS -->
+  <script src="assets/js/login.js"></script>
+
+</body>
+</html>

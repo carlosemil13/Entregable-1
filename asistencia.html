@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistencia</title>
+
+  <!-- Fuente Inter (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (iconos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Nuestro CSS -->
+  <link rel="stylesheet" href="assets/css/asistencia.css">
+</head>
+<body>
+
+  <!-- PANTALLA 1: Tabla de asistencia -->
+  <section id="tabla">
+    <header>
+      <img class="logo" src="assets/image/logo.png" alt="Logo">
+
+      <!-- Botón hamburguesa (abre el dashboard) -->
+      <a class="menu" href="dashboard.html"><i class="fa-solid fa-bars"></i></a>
+    </header>
+
+    <main>
+      <!-- Tarjeta gris con scroll: dentro va la tabla -->
+      <div class="tabla">
+        <table>
+          <tr>
+            <th>Colaborador</th>
+            <th>Entrada</th>
+            <th>Salida</th>
+          </tr>
+
+          <!-- Cada <tr> es una fila. Copia y pega para tener más -->
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+        </table>
+      </div>
+
+      <button id="siguiente">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+    </main>
+  </section>
+
+  <!-- PANTALLA 2: Autenticación (empieza oculta) -->
+  <section id="autenticar" class="oculto">
+    <div class="usuario">
+      <i class="fa-solid fa-circle-user perfil"></i>
+
+      <!-- Este texto solo se ve en tablet y PC -->
+      <p class="texto">Use su rostro para autentificar<br>o use su huella</p>
+    </div>
+
+    <div class="tarjeta">
+      <!-- Caja blanca de arriba -->
+      <div class="rostro">
+        <p>Use su rostro para autentificar</p>
+        <img src="assets/image/rostro-scan.svg" alt="Escaneo de rostro">
+        <p>o use su huella digital</p>
+      </div>
+
+      <!-- Los dos iconos de abajo -->
+      <div class="opciones">
+        <img src="assets/image/rostro.svg" alt="Rostro">
+        <i class="fa-solid fa-fingerprint"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestro JS -->
+  <script src="assets/js/asistencia.js"></script>
+
+</body>
+</html>
