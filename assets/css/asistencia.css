@@ -1,4 +1,3 @@
-/* ---------- Base (móvil) ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -13,19 +12,16 @@ button {
   font-family: inherit;
 }
 
-/* Cada pantalla ocupa todo el celular */
 section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Clase para esconder una pantalla (la usa el JS) */
 .oculto {
   display: none;
 }
 
-/* ---------- Pantalla 1: Tabla ---------- */
 header {
   height: 66px;
   padding: 0 24px;
@@ -68,21 +64,20 @@ main {
   background: linear-gradient(#0a5e47, #00110d);
 }
 
-/* Tarjeta gris con scroll */
 .tabla {
   width: 100%;
   max-height: 480px;
   padding: 20px;
 
-  overflow: auto;            /* aparece el scroll si la tabla es más grande */
+  overflow: auto;           
   background: #d9d9d9;
   scrollbar-color: #7a7a7a #d9d9d9;
 }
 
 table {
   width: 100%;
-  min-width: 320px;          /* hace que haya scroll horizontal en celulares angostos */
-  border-collapse: collapse; /* une los bordes de las celdas */
+  min-width: 320px;          
+  border-collapse: collapse; 
 }
 
 th {
@@ -114,7 +109,6 @@ td {
   font-size: 18px;
 }
 
-/* ---------- Pantalla 2: Autenticación ---------- */
 #autenticar {
   padding: 24px;
   align-items: center;
@@ -130,7 +124,6 @@ td {
   align-items: center;
 }
 
-/* Este texto solo se usa en tablet y PC */
 .texto {
   display: none;
 }
@@ -149,7 +142,6 @@ td {
   border-radius: 40px;
 }
 
-/* Caja blanca */
 .rostro {
   padding: 20px;
 
@@ -167,8 +159,6 @@ td {
 .rostro img {
   width: 130px;
 }
-
-/* Los dos iconos de abajo, separados por una línea en medio */
 .opciones {
   padding: 16px 0;
 
@@ -188,8 +178,6 @@ td {
   font-size: 70px;
   color: #1c3a4a;
 }
-
-/* ================= TABLET (768px en adelante) ================= */
 @media (min-width: 768px) {
   header {
     height: 80px;
@@ -199,8 +187,6 @@ td {
   .logo {
     width: 60px;
   }
-
-  /* Pantalla 1: la tabla se centra y se hace más ancha */
   main {
     padding: 60px 48px 40px;
   }
@@ -221,8 +207,6 @@ td {
   #siguiente {
     font-size: 20px;
   }
-
-  /* Pantalla 2: dos columnas separadas por una línea vertical */
   #autenticar {
     padding: 40px;
     flex-direction: row;
@@ -233,7 +217,6 @@ td {
       linear-gradient(#0a5e47, #00110d);
   }
 
-  /* Las dos columnas miden lo mismo para que la línea quede al centro */
   .usuario,
   .tarjeta {
     width: 40%;
@@ -248,7 +231,6 @@ td {
     font-size: 150px;
   }
 
-  /* El texto pasa de la tarjeta al lado izquierdo */
   .texto {
     display: block;
     color: white;
@@ -278,7 +260,6 @@ td {
   }
 }
 
-/* ================= PC (1024px en adelante) ================= */
 @media (min-width: 1024px) {
   .tabla {
     max-width: 900px;
@@ -291,8 +272,6 @@ td {
   .texto {
     font-size: 18px;
   }
-
-  /* Con mouse: manito y cambio de color al pasar por encima */
   button {
     cursor: pointer;
   }
