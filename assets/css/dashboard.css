@@ -1,4 +1,3 @@
-/* ---------- Base (móvil) ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-/* ---------- Cabecera ---------- */
 header {
   height: 66px;
   padding: 0 24px;
@@ -40,12 +38,10 @@ header {
   text-decoration: none;
 }
 
-/* El icono de salir solo se usa en tablet y PC */
 .icono-salir {
   display: none;
 }
 
-/* ---------- Bloques ---------- */
 main a {
   display: block;
   text-decoration: none;
@@ -65,7 +61,6 @@ main img {
   object-fit: cover;
 }
 
-/* Colores de cada barra */
 .conocenos h2 {
   background: #b9dc5a;
   color: #2f4a5a;
@@ -81,9 +76,7 @@ main img {
   color: #2b3fcf;
 }
 
-/* ================= TABLET (768px en adelante) ================= */
 @media (min-width: 768px) {
-  /* Fondo degradado de toda la página */
   body {
     min-height: 100vh;
     background: linear-gradient(#0a5a42, #021a12);
@@ -98,7 +91,6 @@ main img {
     width: 58px;
   }
 
-  /* La X se cambia por el icono de salir, sin círculo */
   .cerrar {
     width: auto;
     height: auto;
@@ -115,7 +107,6 @@ main img {
     display: inline-block;
   }
 
-  /* Los tres bloques en una fila, como tarjetas redondeadas */
   main {
     padding: 24px;
     display: flex;
@@ -125,7 +116,7 @@ main img {
   main a {
     flex: 1;
     border-radius: 12px;
-    overflow: hidden;   /* recorta las esquinas de la imagen */
+    overflow: hidden; 
   }
 
   main img {
@@ -137,7 +128,6 @@ main img {
     font-size: 20px;
   }
 
-  /* Colores de las barras en tablet y PC */
   .conocenos h2 {
     background: #2fd4b0;
     color: #2c6b5a;
@@ -154,7 +144,6 @@ main img {
   }
 }
 
-/* ================= PC (1024px en adelante) ================= */
 @media (min-width: 1024px) {
   header {
     padding: 0 48px;
@@ -169,7 +158,6 @@ main img {
     font-size: 24px;
   }
 
-  /* Con mouse: la imagen se aclara al pasar por encima */
   main img {
     transition: opacity 0.2s;
   }
